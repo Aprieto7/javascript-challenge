@@ -31,4 +31,12 @@ button.on("click", function() {
 
     var filterData = tableData.filter(sighting => sighting.datetime === inputValue);
     console.log(filterData);
+
+    filterData.forEach(function(selection){
+        console.log(selection)
+        var row = tbody.append("tr");
+        Object.entries(selection).forEach(function([key, value]))
+            var cell = row.append("td");
+            cell.text(value);
+    })
 });
