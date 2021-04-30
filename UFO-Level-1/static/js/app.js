@@ -35,8 +35,9 @@ button.on("click", function() {
     filterData.forEach(function(selection){
         console.log(selection)
         var row = tbody.append("tr");
-        Object.entries(selection).forEach(function([key, value]))
+        Object.entries(selection).forEach(function([key, value]) {
             var cell = row.append("td");
             cell.text(value);
-    })
+        });
+    });
 });
