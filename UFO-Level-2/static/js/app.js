@@ -22,12 +22,17 @@ tableData.forEach(function(ufoSighting) {
  });
 
 var button = d3.select("filter-btn")
-button.on("click", function() {
+button.on("click", function(event) {
     tbody.html("");
 
     var inputElement = d3.select("datetime");
     var inputValue = inputElement.property("value")
-    console.log(inputValue);
+    var inputCity = d3.select("city").property("value");
+    var inputState = d3.select("state").property("value");
+    var inputCountry = d3.select("country").property("value");
+    var inputShape = d3.select("shape").property("value");
+
+    
 
     var filterData = tableData.filter(sighting => sighting.datetime === inputValue);
     console.log(filterData);
